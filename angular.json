@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d2a830e9-0123-4fcb-af14-507230be5073"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,9 +31,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootswatch/dist/flatly/bootstrap.min.css",
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/alertifyjs/build/css/themes/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/alertifyjs/build/alertify.min.js"
+            ]
           },
           "configurations": {
             "production": {
