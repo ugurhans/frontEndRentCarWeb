@@ -1,6 +1,6 @@
 export interface CarDtoMain {
-    carId:number;
-    carName:string;
+    carID:number;
+    colorName:string;
     brandName:string;
     modelYear:number;
 }

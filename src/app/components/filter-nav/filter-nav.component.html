@@ -3,7 +3,7 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button
-          class="accordion-button"
+          class="accordion-button btn-dark"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseOne"
@@ -24,6 +24,7 @@
             *ngFor="let brand of brands"
             class="list-group"
             (click)="setCurrentBrand(brand)"
+            routerLink="/cars/brand/{{ brand.brandID }}"
           >
             <li
               [class]="getCurrentBrandClass(brand)"
@@ -42,7 +43,7 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
         <button
-          class="accordion-button collapsed"
+          class="accordion-button btn-dark collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseTwo"
@@ -63,6 +64,7 @@
             *ngFor="let color of colors"
             class="list-group"
             (click)="setCurrentColor(color)"
+            routerLink="/cars/color/{{ color.colorId }}"
           >
             <li
               [class]="getCurrentColorClass(color)"
@@ -76,12 +78,15 @@
       </div>
     </div>
   </div>
-  <div *ngIf="dataLoadedBrand == true || dataLoadedColor == true">
-    {{ currentBrand.brandName }} {{ currentColor.colorName }}
+  <div>
+    <p *ngIf="dataLoadedBrand == true">{{ currentBrand.brandID }}</p>
+    <p *ngIf="dataLoadedColor == true">{{ currentColor.colorId }}</p>
     <button
+    *ngIf="dataLoadedBrand== true && dataLoadedColor == true"
       style="float: right"
       type="button"
       class="btn btn-outline-secondary"
+      routerLink="/cars/filter/brand/{{currentBrand.brandID}}/color/{{currentColor.colorId}}"
     >
       FİLTER
     </button>

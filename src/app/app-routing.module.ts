@@ -3,7 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/car/car.component';
 
 const routes: Routes = [
-  {path:"",component:CarComponent}
+  { path: "", component: CarComponent },
+  { path: "cars/brand/:brandId", component: CarComponent },
+  { path: "cars/color/:colorId", component: CarComponent },
+  { path: "cars/brand&color/:brandID&:colorId", component: CarComponent },
+  { path: "cars/filter/brand/:BrandID/color/:colorId", component: CarComponent },
 ];
 
 @NgModule({

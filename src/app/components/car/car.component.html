@@ -1,23 +1,26 @@
 <table class="table table-hover">
-  <thead  class="thead-inverse">
+  <thead class="thead-inverse">
     <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
+      <th scope="col">ID</th>
+      <th scope="col">BRAND</th>
+      <th scope="col">MODEL YEAR</th>
+      <th scope="col">COLOR</th>
     </tr>
   </thead>
 
   <tbody>
-    
-      <tr *ngFor="let car of cars" class="table-dark">
-        <td>{{ car.carName }}</td>
-        <td>{{ car.brandId }}</td>
-        <td>{{ car.colorId }}</td>
-        <td>v{{ car.description }}</td>
-        <button type="button" class="btn btn-outline-secondary">Take Info</button>
-      </tr>
-    
+    <tr *ngFor="let car of carsDtoMain" class="table">
+      <td>{{ car.carID }}</td>
+      <td>{{ car.brandName }}</td>
+      <td>{{ car.modelYear }}</td>
+      <td>{{ car.colorName }}</td>
+      <button
+        style="margin: 8px"
+        type="button"
+        class="btn btn-outline-secondary"
+      >
+        Take Info
+      </button>
+    </tr>
   </tbody>
-
 </table>

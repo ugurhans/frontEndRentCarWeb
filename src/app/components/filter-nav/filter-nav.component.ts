@@ -38,6 +38,7 @@ export class FilterNavComponent implements OnInit {
   }
   setCurrentBrand(brand:Brand){
     this.currentBrand = brand;
+    console.log(brand.brandID)
  }
 
   getCurrentBrandClass(brand:Brand){
@@ -51,6 +52,7 @@ export class FilterNavComponent implements OnInit {
   setCurrentColor(color:Color){
     this.currentColor = color;
     console.log(color.colorId)
+
  }
  getCurrentColorClass(color:Color){
   if (color==this.currentColor) {

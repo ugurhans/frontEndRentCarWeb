@@ -9,6 +9,10 @@ import { BrandComponent } from './components/brand/brand.component';
 import { ColorComponent } from './components/color/color.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FilterNavComponent } from './components/filter-nav/filter-nav.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import {FormsModule,ReactiveFormsModule} from "@angular/forms"
+
+
 
 
 @NgModule({
@@ -20,12 +24,16 @@ import { FilterNavComponent } from './components/filter-nav/filter-nav.component
     ColorComponent,
     BannerComponent,
     FilterNavComponent,
+    ProductAddComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
